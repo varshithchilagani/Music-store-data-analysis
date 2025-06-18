@@ -4,7 +4,7 @@ EXPLORATORY DATA ANALYSIS - DATABASE EXPLORATION
 ===========================================================================================
 Purpose:
 	- To explore the the list of tables and their schemas in the database.
-    - To inspect the columns and metadata for specific tables.
+        - To inspect the columns and metadata for specific tables.
 
 Table Used:
     - INFORMATION_SCHEMA.TABLES
