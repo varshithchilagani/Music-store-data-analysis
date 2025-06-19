@@ -97,7 +97,8 @@ CREATE TABLE IF NOT EXISTS customers(
     phone			VARCHAR(25),
     fax				VARCHAR(100),
     email			VARCHAR(200),
-    support_rep_id 	INT
+    support_rep_id 	INT,
+    FOREIGN KEY(support_rep_id) REFERENCES employees(employee_id)
 )
 
 
