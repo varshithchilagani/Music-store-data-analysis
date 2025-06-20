@@ -1,12 +1,14 @@
 -- 1. Artist table
-CREATE TABLE IF NOT EXISTS artists(
+CREATE TABLE IF NOT EXISTS 
+artists(
     artist_id	SERIAL PRIMARY KEY,
     name 		VARCHAR(100) NOT NULL
 );
 
 
 -- 2. Album table
-CREATE TABLE IF NOT EXISTS albums(
+CREATE TABLE IF NOT EXISTS 
+albums(
     album_id 		SERIAL PRIMARY KEY,
     title 			VARCHAR(100) NOT NULL,
     artist_id 		INT,
@@ -15,21 +17,24 @@ CREATE TABLE IF NOT EXISTS albums(
 
 
 -- 3. Genre table
-CREATE TABLE IF NOT EXISTS genre(
+CREATE TABLE IF NOT EXISTS 
+genre(
     genre_id 	SERIAL PRIMARY KEY,
     name 		VARCHAR(50)
 );
 
 
 -- 4. Media_type table
-CREATE TABLE IF NOT EXISTS media_type(
+CREATE TABLE IF NOT EXISTS 
+media_type(
     media_type_id 	SERIAL PRIMARY KEY,
     name 			VARCHAR(50)
 );
 
 
 -- 5. Playlist table
-CREATE TABLE IF NOT EXISTS playlist(
+CREATE TABLE IF NOT EXISTS 
+playlist(
     playlist_id 	SERIAL PRIMARY KEY,
     name 			VARCHAR(50)
 );
@@ -37,7 +42,8 @@ CREATE TABLE IF NOT EXISTS playlist(
 
 
 -- 6. Track table
-CREATE TABLE IF NOT EXISTS track(
+CREATE TABLE IF NOT EXISTS 
+track(
     track_id 		SERIAL PRIMARY KEY,
     name 			VARCHAR(250),
     album_id 		INT,
@@ -54,7 +60,8 @@ CREATE TABLE IF NOT EXISTS track(
 
 
 -- 7. Playlist_track table
-CREATE TABLE IF NOT EXISTS Playlist_track(
+CREATE TABLE IF NOT EXISTS 
+Playlist_track(
     playlist_id 	INT,
     track_id 		INT,
     FOREIGN KEY(playlist_id) REFERENCES playlist(playlist_id),
@@ -63,7 +70,8 @@ CREATE TABLE IF NOT EXISTS Playlist_track(
 
 
 -- 8. Employee table
-CREATE TABLE IF NOT EXISTS employees(
+CREATE TABLE IF NOT EXISTS 
+employees(
     employee_id		SERIAL PRIMARY KEY,
     last_name 		VARCHAR(100),
     first_name 		VARCHAR(100),
@@ -84,7 +92,8 @@ CREATE TABLE IF NOT EXISTS employees(
 
 
 -- 9. Customers table
-CREATE TABLE IF NOT EXISTS customers(
+CREATE TABLE IF NOT EXISTS 
+customers(
     customer_id		SERIAL PRIMARY KEY,
     first_name		VARCHAR(100),
     last_name		VARCHAR(100),
@@ -103,7 +112,8 @@ CREATE TABLE IF NOT EXISTS customers(
 
 
 -- 10. Invoice table
-CREATE TABLE IF NOT EXISTS invoice(
+CREATE TABLE IF NOT EXISTS 
+invoice(
     invoice_id 				SERIAL PRIMARY KEY,
     customer_id				INT,
     invoice_date 			DATE,
@@ -118,7 +128,8 @@ CREATE TABLE IF NOT EXISTS invoice(
 
 
 -- 11. Invoice line table
-CREATE TABLE IF NOT EXISTS invoice_line(
+CREATE TABLE IF NOT EXISTS 
+invoice_line(
     invoice_line_id 	SERIAL PRIMARY KEY,
     invoice_id 			INT,
     track_id 			INT,
