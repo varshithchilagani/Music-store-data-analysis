@@ -28,6 +28,6 @@ This document explains the adjustments made to some dataset files to ensure they
 
 ## Note
 
-- Original raw files are in the `dataset/` folder.
+- Original raw files are in the `Datasets/` folder.
 - Cleaned versions were used only for cloud database upload.
 - These changes reflect learning and adaptation to real-world cloud database environments.
