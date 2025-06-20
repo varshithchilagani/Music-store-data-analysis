@@ -1,33 +1,33 @@
-# Data Cleaning Notes
+# Data Cleaning & Preparation Notes
 
-This document outlines the small but necessary data transformations performed to make the raw dataset compatible with AWS RDS (PostgreSQL).
-
----
-
-## 🧾 Issues Encountered
-
-### 1. Timestamp Format in `employee.csv` and `invoice.csv`
-
-- **Issue**: `HireDate` and `InvoiceDate` columns had the format `YYYY-MM-DD 00:00:00`, which worked locally but caused format errors in AWS PostgreSQL.
-- **Solution**: Reformatted the date to `YYYY-MM-DD` using Excel before uploading.
+This document explains the adjustments made to some dataset files to ensure they were compatible with AWS RDS (PostgreSQL). These changes were necessary for smooth data ingestion and did not affect the meaning or structure of the data.
 
 ---
 
-### 2. Float-to-Integer Mismatch
+## 1. Date Format Correction
 
-- **Issue**: Some columns expected integers (like IDs), but had float values like `9.0`, which PostgreSQL rejected.
-- **Solution**: Cast float-like values to integers using spreadsheet tools before importing.
-
----
-
-### 3. Encoding Differences
-
-- **Observation**: AWS PostgreSQL can be stricter about special characters or delimiters.
-- **Preventive Step**: All CSVs were saved in UTF-8 encoding and delimiter issues were double-checked.
+- **Affected Files**: `employee.csv`, `invoice.csv`
+- **Issue**: Date fields included time components (e.g., `YYYY-MM-DD 00:00:00`), which caused errors in PostgreSQL.
+- **Fix Applied**: Converted all date values to `YYYY-MM-DD` format to match PostgreSQL’s `DATE` data type requirement.
 
 ---
 
-## ✅ Outcome
+## 2. Integer Format Adjustment
 
-All tables were successfully ingested into AWS RDS after these changes. No schema changes were made — only minor format adjustments. These are typical data engineering challenges and were documented for transparency.
+- **Affected Files**: `invoice_line.csv` and others
+- **Issue**: Some numeric values meant to be integers (e.g., `9.0`) were stored with decimal points.
+- **Fix Applied**: Converted these values to plain integers (e.g., `9.0` → `9`) for compatibility with PostgreSQL’s `INTEGER` type.
 
+---
+
+## 3. Column Consistency Check
+
+- **Action Taken**: Verified column names and data types across all CSVs to ensure they matched the SQL schema used in the AWS RDS database.
+
+---
+
+## Note
+
+- Original raw files are in the `dataset/` folder.
+- Cleaned versions were used only for cloud database upload.
+- These changes reflect learning and adaptation to real-world cloud database environments.
