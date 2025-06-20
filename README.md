@@ -15,14 +15,14 @@ An end-to-end SQL-based data analytics project performed on the Chinook music st
 
 ## 📁 Project Structure
 
----
-.
-├dataset/                   # Original CSV files used to build the database music_store_db
+```
+
+├dataset/                      # Original CSV files used to build the database music_store_db
 ├── scripts/                   # All analysis queries categorized step-wise
 ├── insights_summary.md        # Key business insights from SQL analysis
 └── docs/                      # ER Diagram, screenshots
 
-
+```
 ---
 
 ## 🔍 Analysis Highlights
