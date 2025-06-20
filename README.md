@@ -17,7 +17,7 @@ An end-to-end SQL-based data analytics project performed on the Chinook music st
 
 ```
 
-├── dataset/                   # Original CSV files used to build the database music_store_db
+├── datasets/                  # Original CSV files used to build the database music_store_db
 ├── scripts/                   # All analysis queries categorized step-wise
 ├── insights_summary.md        # Key business insights from SQL analysis
 └── docs/                      # ER Diagram, screenshots
@@ -65,7 +65,7 @@ This project includes both Exploratory and Advanced Analytical insights:
 
 1. Clone the repository.
 2. Use any PostgreSQL-compatible tool (e.g., pgAdmin, DBeaver).
-3. Run `00_table_schema.sql` to create schema and tables.
+3. Run `00_table_schema.sql` to create the schema and tables.
 4. Import CSV files into tables.
 5. Run scripts in `scripts/` sequentially.
 6. Review business insights from `insights_summary.md`.
