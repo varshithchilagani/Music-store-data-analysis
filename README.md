@@ -17,11 +17,10 @@ An end-to-end SQL-based data analytics project performed on the Chinook music st
 
 ```plaintext
 .
-├── sql_scripts/                # All analysis queries categorized step-wise
+├── dataset/                   # Original CSV files used to build the database music_store_db
+├── scripts/                   # All analysis queries categorized step-wise
 ├── insights_summary.md        # Key business insights from SQL analysis
-├── docs/                      # PPT, ER Diagram, screenshots, and AWS video
-├── music_store_db/            # Data loading & schema setup
-└── README.md                  # Project overview and instructions
+└── docs/                      # ER Diagram, screenshots
 
 
 ---
@@ -38,7 +37,7 @@ This project includes both Exploratory and Advanced Analytical insights:
 - **Cumulative Metrics** – Revenue buildup, purchases over time
 - **Performance Analysis** – Average sales metrics
 - **Part to Whole Analysis** – Share of revenue by genre, customer, country
-- **Segmentation** – Customers by country, city, employee
+- **Segmentation** – Customers by country, city, and employees
 - **Reporting** – Business summary for stakeholders
 
 ---
@@ -46,8 +45,8 @@ This project includes both Exploratory and Advanced Analytical insights:
 ## ☁️ Cloud Deployment – AWS RDS
 
 - The PostgreSQL database was deployed to **Amazon RDS**.
-- Enabled public access for querying via **pgAdmin** and PostgreSQL client.
-- AWS deployment walkthrough available in `/docs`.
+- Connected and tested using **pgAdmin** and PostgreSQL client.
+- AWS deployment steps and screenshots are available in `/docs`.
 
 ---
 
