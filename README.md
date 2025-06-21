@@ -1,4 +1,4 @@
-# Music Store Data Analysis 📊
+# Music Store Sales Analysis 📊
 
 An end-to-end SQL-based data analytics project performed on the Chinook music store dataset. The goal is to extract business insights using structured SQL queries and showcase real-world analytical thinking and cloud deployment.
 
