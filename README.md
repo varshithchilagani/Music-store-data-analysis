@@ -42,11 +42,17 @@ This project includes both Exploratory and Advanced Analytical insights:
 
 ---
 
-## ☁️ Cloud Deployment – AWS RDS
+## Deployment
 
 - The PostgreSQL database was deployed to **Amazon RDS**.
 - Connected and tested using **pgAdmin** and PostgreSQL client.
 - AWS deployment steps and screenshots are available in `/docs`.
+
+## Environment & Version Info
+- **Database**: PostgreSQL 17.4 (Hosted on AWS RDS)
+- **Client**: pgAdmin 4 (connected remotely)
+- **Server OS**: Linux (confirmed via `SELECT version();`)
+- **Client OS**: Windows
 
 ---
 
