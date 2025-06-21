@@ -95,6 +95,8 @@ This project includes both Exploratory and Advanced Analytical insights:
 
 - ER Diagram
 - AWS RDS Deployment Screenshots
+- AWS RDS connection guide
+- Essential data cleaning notes
 
 ---
 
